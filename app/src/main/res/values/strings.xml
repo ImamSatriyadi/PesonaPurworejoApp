@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Pesona Purworejo</string>
+
+    <!-- String Splash Screen -->
+    <string name="splash_txt_pesona">Pesona</string>
+    <string name="splash_txt_purworejo">Purworejo</string>
+
+    <!-- String Walkthrough -->
+    <string name="walkthrough_txt_start">Start</string>
+    <string name="walkthrough_txt_next">Next</string>
+    <string name="walkthrough_txt_skip">Skip</string>
+
+    <!-- String Navigation -->
+    <string name="title_activity_home_">Home_Activity</string>
+    <string name="nav_txt_home">Home</string>
+    <string name="nav_txt_wisata">Wisata</string>
+    <string name="nav_txt_kesenian">Kesenian</string>
+    <string name="nav_txt_kuliner">Kuliner</string>
+    <string name="nav_txt_event">Event</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

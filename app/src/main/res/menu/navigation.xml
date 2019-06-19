@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/nav_txt_home" />
+
+    <item
+        android:id="@+id/navigation_wisata"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/nav_txt_wisata" />
+
+    <item
+        android:id="@+id/navigation_kesenian"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/nav_txt_kesenian" />
+
+    <item
+        android:id="@+id/navigation_kuliner"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/nav_txt_kuliner" />
+
+    <item
+        android:id="@+id/navigation_event"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/nav_txt_event" />
+
+</menu>
