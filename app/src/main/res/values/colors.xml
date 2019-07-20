@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#487eb0</color>
+    <color name="colorPrimaryDark">#40739e</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorWhite">#FFFFFF</color>
 
     <!-- Color Walkthrough -->
 
@@ -19,10 +20,10 @@
     <color name="dot_dark_screen4">#FFFFF0</color>
 
     <!-- dots active colors -->
-    <color name="dot_light_screen1">#A9A9A9</color>
-    <color name="dot_light_screen2">#A9A9A9</color>
-    <color name="dot_light_screen3">#A9A9A9</color>
-    <color name="dot_light_screen4">#A9A9A9</color>
+    <color name="dot_light_screen1">#487eb0</color>
+    <color name="dot_light_screen2">#487eb0</color>
+    <color name="dot_light_screen3">#487eb0</color>
+    <color name="dot_light_screen4">#487eb0</color>
 
     <array name="array_dot_active">
         <item>@color/dot_light_screen1</item>
@@ -37,6 +38,17 @@
         <item>@color/dot_dark_screen3</item>
         <item>@color/dot_dark_screen4</item>
     </array>
+
+    <color name="blueLight">#45aaf2</color>
+    <color name="blueDark">#2d98da</color>
+    <color name="yellowLight">#fbc531</color>
+    <color name="yellowDark">#e1b12c</color>
+    <color name="greenLight">#4cd137</color>
+    <color name="greenDark">#44bd32</color>
+    <color name="redLight">#e84118</color>
+    <color name="redDark">#c23616</color>
+    <color name="grey">#d1d8e0</color>
+    <color name="darkGrey">#737373</color>
 
 
 </resources>

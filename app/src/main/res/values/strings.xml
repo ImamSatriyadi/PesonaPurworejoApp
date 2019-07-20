@@ -1,24 +1,71 @@
 <resources>
+
     <string name="app_name">Pesona Purworejo</string>
 
-    <!-- String Splash Screen -->
     <string name="splash_txt_pesona">Pesona</string>
     <string name="splash_txt_purworejo">Purworejo</string>
 
-    <!-- String Walkthrough -->
-    <string name="walkthrough_txt_start">Start</string>
-    <string name="walkthrough_txt_next">Next</string>
-    <string name="walkthrough_txt_skip">Skip</string>
+    <string name="walkthrough_txt_start">Mulai</string>
+    <string name="walkthrough_txt_next">Selanjutnya</string>
+    <string name="walkthrough_txt_skip">Lewati</string>
+    <string name="walthrough_title_1">Pariwisata Purworejo</string>
+    <string name="walkthrough_content_1">Dengan menggunakan aplikasi PESONA PURWOREJO proses pencarian daftar tempat wisata di Kabupaten Purworejo menjadi lebih mudah.</string>
+    <string name="walkthrough_title_2">Kesenian Purworejo</string>
+    <string name="walkthrough_content_2">Dengan menggunakan aplikasi PESONA PURWOREJO dapat menambah pengetahuan mengenai kesenian yang terdapat di Kabupaten Purworejo.</string>
+    <string name="walkthrough_title_3">Kuliner Purworejo</string>
+    <string name="walkthrough_content_3">Dengan menggunakan aplikasi PESONA PURWOREJO anda juga dapat mengetahui kuliner-kuliner yang tedapat di Kabupaten Purworejo.</string>
+    <string name="walkthrough_title_4">Event Purworejo</string>
+    <string name="walkthrough_content_4">Dengan menggunakan aplikasi PESONA PURWOREJO anda juga dapat mengetahui event-event yang dilaksanakan di Kabupaten Purworejo.</string>
 
-    <!-- String Navigation -->
     <string name="title_activity_home_">Home_Activity</string>
-    <string name="nav_txt_home">Home</string>
+    <string name="nav_txt_home">Beranda</string>
     <string name="nav_txt_wisata">Wisata</string>
     <string name="nav_txt_kesenian">Kesenian</string>
     <string name="nav_txt_kuliner">Kuliner</string>
     <string name="nav_txt_event">Event</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_icon">icon</string>
+    <string name="home_about">about</string>
+
+    <string name="about_tentang_aplikasi">Tentang Aplikasi:</string>
+    <string name="about_version">Pesona Purworejo versi 1.0</string>
+    <string name="about_create">Dibuat tanggal 15 Juni 2019</string>
+    <string name="about_release">Direalease tanggal 25 Juli 2019</string>
+    <string name="about_by">Oleh</string>
+    <string name="about_author">10116063 (AKB-2/IF-2) - IMAM SATRIYADI</string>
+    <string name="about_prodi">TEKNIK INFORMATIKA</string>
+    <string name="about_nb_1">*Aplikasi ini hanya bersifat studi</string>
+    <string name="about_nb_2">*Referensi data dari Dinas Pariwisata Kabupaten Purworejo</string>
+
+    <string name="judul_berita">Judul Berita</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="sumber_berita">Sumber Berita :</string>
+
+    <string name="nama_kesenian">Nama Kesenian</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="kategori_kesenian">Kategori Kesenian</string>
+    <string name="alamat">Alamat</string>
+    <string name="lokasi">Lokasi</string>
+    <string name="kontak_pengelola">Kontak Pengelola</string>
+    <string name="sosial_media">Sosial Media</string>
+    <string name="nama_kuliner">Nama Kuliner</string>
+    <string name="kategrori">Kategori</string>
+    <string name="nama_wisata">Nama Wisata</string>
+    <string name="jenis_wisata">Jenis Wisata</string>
+    <string name="kategori_pariwisata">Kategori Pariwisata</string>
+    <string name="harga_tiket_masuk">Harga Tiket Masuk</string>
+    <string name="harga">Harga</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="nama_event">Nama Event</string>
+    <string name="tanggal_">Tanggal : </string>
+    <string name="lokasi_">Lokasi : </string>
+    <string name="kategori_">Kategori : </string>
+
+    <string name="rekomendasi_pariwisata">Rekomendasi Pariwisata</string>
+    <string name="tidak_ada_sambungan">Tidak ada sambungan internet</string>
+    <string name="silahkan_periksa_internet">Silahkan periksa sambungan internet</string>
+    <string name="wifi">atau sambungan Wi-Fi anda</string>
+    <string name="wisata_unggulan">Pariwisata Unggulan</string>
+
 
 </resources>
