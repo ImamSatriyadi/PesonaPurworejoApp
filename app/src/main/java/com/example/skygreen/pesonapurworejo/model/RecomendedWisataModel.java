@@ -1,6 +1,6 @@
 package com.example.skygreen.pesonapurworejo.model;
 
-public class WisataModel {
+public class RecomendedWisataModel {
     private String idWisata;
     private String namaWisata;
     private String alamat;
