@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorWhite"
+            android:padding="10dp">
+            <ImageView
+                android:id="@+id/icon_kuliner"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="@string/home_icon" />
+
+            <TextView
+                android:id="@+id/txt_nama_kuliner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/nama_kuliner"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_below="@id/icon_kuliner"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/txt_deskripsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/deskripsi"
+                android:textSize="14sp"
+                android:layout_below="@id/txt_nama_kuliner"
+                android:layout_marginStart="5dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/view_1"
+                android:background="@color/grey"
+                android:layout_below="@id/txt_deskripsi"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_kategori_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center_vertical"
+                android:text="@string/kategrori"
+                android:textSize="14sp"
+                android:layout_below="@id/view_1"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/txt_kategori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/kategrori"
+                android:textSize="14sp"
+                android:layout_below="@id/txt_kategori_txt"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/view_2"
+                android:background="@color/grey"
+                android:layout_below="@id/txt_kategori"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_lokasi_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center_vertical"
+                android:text="@string/alamat"
+                android:textSize="14sp"
+                android:layout_below="@id/view_2"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/txt_lokasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/lokasi"
+                android:textSize="14sp"
+                android:layout_below="@id/txt_lokasi_txt"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/view_3"
+                android:background="@color/grey"
+                android:layout_below="@id/txt_lokasi"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_pengelolal_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center_vertical"
+                android:text="@string/kontak_pengelola"
+                android:textSize="14sp"
+                android:layout_below="@id/view_3"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/txt_pengelola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/kontak_pengelola"
+                android:textSize="14sp"
+                android:layout_below="@id/txt_pengelolal_txt"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/view_4"
+                android:background="@color/grey"
+                android:layout_below="@id/txt_pengelola"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <TextView
+                android:id="@+id/txt_sosial_media_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="7dp"
+                android:gravity="center_vertical"
+                android:text="@string/sosial_media"
+                android:textSize="14sp"
+                android:layout_below="@id/view_4"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/txt_sosial_media"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/sosial_media"
+                android:textSize="14sp"
+                android:layout_below="@id/txt_sosial_media_txt"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/view_5"
+                android:background="@color/grey"
+                android:layout_below="@id/txt_sosial_media"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/rel_desc_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/colorWhite"
+        >
+        <TextView
+            android:id="@+id/txt_title_desc_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_tentang_aplikasi"
+            android:layout_marginTop="8dp"
+            android:textSize="15sp"
+            />
+
+        <View
+            android:id="@+id/view_10"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/txt_title_desc_about"
+            android:layout_marginTop="8dp"
+            android:background="@color/grey"/>
+
+        <TextView
+            android:id="@+id/txt_content_desc_about"
+            android:layout_below="@id/view_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/about_version"
+            android:textSize="13sp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/txt_content_desc_about1"
+            android:layout_below="@id/txt_content_desc_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/about_create"
+            android:textSize="13sp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/txt_content_desc_about2"
+            android:layout_below="@id/txt_content_desc_about1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/about_release"
+            android:textSize="13sp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/txt_content_desc_about3"
+            android:layout_below="@id/txt_content_desc_about2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/about_by"
+            android:textSize="13sp"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/txt_content_desc_about4"
+            android:layout_below="@id/txt_content_desc_about3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/about_author"
+            android:textSize="13sp"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/txt_content_desc_about5"
+            android:layout_below="@id/txt_content_desc_about4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/about_prodi"
+            android:textSize="13sp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/txt_content_desc_about6"
+            android:layout_below="@id/txt_content_desc_about5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/about_nb_1"
+            android:textSize="13sp"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/txt_content_desc_about7"
+            android:layout_below="@id/txt_content_desc_about6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_nb_2"
+            android:textSize="13sp"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

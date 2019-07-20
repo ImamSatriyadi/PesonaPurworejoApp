@@ -6,11 +6,86 @@
     tools:context=".WisataFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/rec_wisata">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       tools:ignore="UselessParent">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="45dp"
+           android:background="@color/colorPrimary"
+           android:id="@+id/rel_sub_header"
+           >
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/nav_txt_wisata"
+               android:layout_centerInParent="true"
+               android:textColor="@color/colorWhite"
+               android:textSize="18sp"
+               android:textStyle="bold"
+               />
+       </RelativeLayout>
 
-    </android.support.v7.widget.RecyclerView>
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="300dp"
+           android:layout_below="@id/rel_sub_header"
+           android:layout_marginTop="5dp"
+           android:id="@+id/rel_conn"
+           android:visibility="gone"
+           tools:ignore="UselessLeaf">
+
+          <TextView
+              android:id="@+id/txt_title_notif"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textAlignment="center"
+              android:text="@string/tidak_ada_sambungan"
+              android:layout_centerInParent="true"
+              android:textStyle="bold"
+              android:textSize="17sp"
+              android:layout_marginTop="10dp"
+              />
+
+           <TextView
+               android:id="@+id/txt_content_1"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/txt_title_notif"
+               android:textAlignment="center"
+               android:text="@string/silahkan_periksa_internet"
+               android:textSize="15sp"
+               android:layout_marginTop="10dp"
+               />
+
+           <TextView
+               android:id="@+id/txt_content_2"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/txt_content_1"
+               android:textAlignment="center"
+               android:text="@string/wifi"
+               android:textSize="15sp"
+               />
+
+       </RelativeLayout>
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:paddingBottom="65dp"
+           android:layout_below="@id/rel_sub_header"
+           android:layout_marginTop="5dp"
+           android:id="@+id/sc_content"
+           >
+           <android.support.v7.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/rec_wisata">
+
+           </android.support.v7.widget.RecyclerView>
+       </ScrollView>
+   </RelativeLayout>
+
 
 </FrameLayout>

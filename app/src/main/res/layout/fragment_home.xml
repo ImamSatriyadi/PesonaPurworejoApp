@@ -5,10 +5,107 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="65dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/txt_wisata_unggulan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/wisata_unggulan"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_marginTop="5dp"
+             />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rec_unggulan"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/txt_wisata_unggulan"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/txt_recomended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rekomendasi_pariwisata"
+                android:textStyle="bold"
+                android:layout_below="@id/rec_unggulan"
+                android:layout_marginLeft="5dp"
+                android:textSize="17sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@id/txt_recomended"
+                android:layout_marginTop="5dp"
+                android:id="@+id/rel_conn"
+                android:visibility="gone"
+                tools:ignore="UselessLeaf">
+
+                <TextView
+                    android:id="@+id/txt_title_notif"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="@string/tidak_ada_sambungan"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:textSize="17sp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/txt_content_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_title_notif"
+                    android:textAlignment="center"
+                    android:text="@string/silahkan_periksa_internet"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_content_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_content_1"
+                    android:textAlignment="center"
+                    android:text="@string/wifi"
+                    android:textSize="15sp"
+                    />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rec_wisata"
+                android:layout_below="@id/txt_recomended"
+                android:layout_marginTop="5dp"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+    </ScrollView>
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+
 
 </FrameLayout>

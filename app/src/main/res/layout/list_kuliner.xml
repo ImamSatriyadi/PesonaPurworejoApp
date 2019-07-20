@@ -6,7 +6,7 @@
     >
 
     <android.support.v7.widget.CardView
-        android:id="@+id/card_wisata_list"
+        android:id="@+id/card_kuliner_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -19,48 +19,48 @@
             android:orientation="horizontal"
             android:padding="10dp">
             <ImageView
-                android:id="@+id/icon_wisata"
+                android:id="@+id/icon_kuliner"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@mipmap/ic_launcher"
                 android:contentDescription="@string/home_icon" />
 
             <TextView
-                android:id="@+id/txt_nama_wisata"
+                android:id="@+id/txt_nama_kuliner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center_vertical"
-                android:text="@string/nama_wisata"
+                android:text="@string/nama_kuliner"
                 android:textSize="17sp"
+                android:layout_below="@id/icon_kuliner"
                 android:textStyle="bold"
-                android:layout_below="@id/icon_wisata"
                 android:layout_marginStart="5dp" />
 
             <TextView
-                android:id="@+id/txt_kategori_text"
+                android:id="@+id/txt_lokasi_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:gravity="center_vertical"
-                android:text="@string/kategori_"
+                android:text="@string/lokasi_"
                 android:textSize="14sp"
-                android:layout_below="@id/txt_nama_wisata"
+                android:layout_below="@id/txt_nama_kuliner"
                 android:layout_marginStart="5dp" />
             <TextView
-                android:id="@+id/txt_kategori"
+                android:id="@+id/txt_lokasi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
                 android:gravity="center_vertical"
-                android:text="@string/kategrori"
+                android:text="@string/lokasi"
                 android:textSize="14sp"
-                android:layout_below="@id/txt_nama_wisata"
-                android:layout_toRightOf="@id/txt_kategori_text"
+                android:layout_toRightOf="@id/txt_lokasi_text"
+                android:layout_below="@id/txt_nama_kuliner"
                 android:textStyle="bold"
                 android:layout_marginStart="3dp"
-                android:layout_toEndOf="@id/txt_kategori_text" />
+                android:layout_toEndOf="@id/txt_lokasi_text" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 

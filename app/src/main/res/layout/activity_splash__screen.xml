@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     tools:context=".SplashScreen">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        >
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -18,22 +20,12 @@
             android:paddingBottom="30dp"
             >
 
-            <TextView
-                android:id="@+id/splash_txt_pesona"
-                android:layout_width="wrap_content"
+            <ImageView
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:text="@string/splash_txt_pesona"
-                android:textSize="@dimen/splash_txt_pesona"
-                />
-
-            <TextView
-                android:id="@+id/splash_txt_purworejo"
-                android:layout_below="@id/splash_txt_pesona"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/splash_txt_purworejo"
-                android:textSize="@dimen/splash_txt_purworejo"
-                />
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo"
+                android:contentDescription="@string/home_icon" />
 
 
         </RelativeLayout>
