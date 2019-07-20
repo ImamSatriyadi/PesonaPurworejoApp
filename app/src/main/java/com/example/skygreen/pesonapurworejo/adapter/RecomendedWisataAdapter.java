@@ -1,8 +1,6 @@
 package com.example.skygreen.pesonapurworejo.adapter;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,31 +8,30 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.skygreen.pesonapurworejo.HomeFragment;
 import com.example.skygreen.pesonapurworejo.R;
-import com.example.skygreen.pesonapurworejo.WisataFragment;
+import com.example.skygreen.pesonapurworejo.model.RecomendedWisataModel;
 import com.example.skygreen.pesonapurworejo.model.WisataModel;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
-public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.ViewHolder> {
-    private List<WisataModel> wisataModels;
-    WisataFragment context;
+public class RecomendedWisataAdapter extends RecyclerView.Adapter<RecomendedWisataAdapter.ViewHolder> {
+    private List<RecomendedWisataModel> recomendedWisataModels;
+    HomeFragment context;
     OnCallBackListener listener;
 
-    public WisataAdapter (WisataFragment wisataFragment, List<WisataModel> wisataModels){
-        this.context        = wisataFragment;
-        this.wisataModels   = wisataModels;
+    public RecomendedWisataAdapter(HomeFragment context, List<RecomendedWisataModel> recomendedWisataModels) {
+        this.recomendedWisataModels = recomendedWisataModels;
+        this.context = context;
     }
 
     @NonNull
+
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_wisata, viewGroup, false);
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_recomended_wisata, viewGroup, false);
         // mengeset ukuran view, margin, padding, dan parameter layout lainnya
         ViewHolder vh = new ViewHolder(v);
 
@@ -42,21 +39,21 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int i) {
-        final WisataModel wisataModel = wisataModels.get(i);
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+        final RecomendedWisataModel recomendedWisataModel = recomendedWisataModels.get(i);
         Glide.with(context)
-                .load("http://bambu.web.id/"+wisataModel.getIcon())
+                .load("http://bambu.web.id/"+recomendedWisataModel.getIcon())
                 .crossFade()
                 .placeholder(R.mipmap.ic_launcher)
                 .into(viewHolder.icon);
 
-        viewHolder.namaWisata.setText(wisataModel.getNamaWisata());
-        viewHolder.kategori.setText(wisataModel.getKategori());
+        viewHolder.namaWisata.setText(recomendedWisataModel.getNamaWisata());
+        viewHolder.kategori.setText(recomendedWisataModel.getKategori());
     }
 
     @Override
     public int getItemCount() {
-        return wisataModels.size();
+        return recomendedWisataModels.size();
     }
 
     public void setOnCallbackListener(OnCallBackListener listener){
@@ -78,19 +75,17 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.ViewHolder
             v.setOnClickListener(this);
             namaWisata  = (TextView) v.findViewById(R.id.txt_nama_wisata);
             kategori    = (TextView) v.findViewById(R.id.txt_kategori);
-
-            cardWisata  = (CardView) v.findViewById(R.id.card_wisata_list);
             icon        = (ImageView) v.findViewById(R.id.icon_wisata);
         }
 
         @Override
         public void onClick(View v) {
             if(listener != null){
-                listener.onClick(wisataModels.get(getAdapterPosition()));
+               listener.onClick(recomendedWisataModels.get(getAdapterPosition()));
             }
         }
     }
     public interface OnCallBackListener{
-        void onClick(WisataModel wisataModel);
+        void onClick(RecomendedWisataModel recomendedWisataModel);
     }
 }
