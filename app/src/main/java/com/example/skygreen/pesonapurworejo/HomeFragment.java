@@ -1,6 +1,7 @@
 package com.example.skygreen.pesonapurworejo;
 
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatDialog;
@@ -50,7 +51,8 @@ public class HomeFragment extends Fragment implements RecomendedWisataView{
     private RequestQueue requestQueue;
     private StringRequest stringRequest;
     private AppCompatDialog dialog;
-    private RelativeLayout relConn;
+    private RelativeLayout relConn, relContent;
+    private ProgressDialog progress;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -61,8 +63,15 @@ public class HomeFragment extends Fragment implements RecomendedWisataView{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+        progress = new ProgressDialog(getContext());
+        progress.setCancelable(false);
+        progress.setMessage("Mohon Tunggu");
+        progress.show();
+
         final View view       = inflater.inflate(R.layout.fragment_home, container, false);
         relConn         = view.findViewById(R.id.rel_conn);
+        relContent      = view.findViewById(R.id.rec_content);
         recyclerView    = view.findViewById(R.id.rec_wisata);
         recyclerViewUnggulan    = view.findViewById(R.id.rec_unggulan);
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -78,7 +87,6 @@ public class HomeFragment extends Fragment implements RecomendedWisataView{
         stringRequest   = new StringRequest(Request.Method.GET, url,new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.d("response", response);
                 try{
                     JSONObject jsonObject    = new JSONObject(response);
                     JSONArray jsonArray     = jsonObject.getJSONArray("datawisata");
@@ -112,6 +120,8 @@ public class HomeFragment extends Fragment implements RecomendedWisataView{
                         recyclerViewUnggulan.setAdapter(wisataUnggulanAdapter);
                         recyclerView.setAdapter(recomendedWisataAdapter);
                     }
+                    relContent.setVisibility(view.VISIBLE);
+                    progress.dismiss();
                 }
                 catch(JSONException e){
                     e.printStackTrace();
@@ -122,7 +132,8 @@ public class HomeFragment extends Fragment implements RecomendedWisataView{
             public void onErrorResponse(VolleyError error) {
                 //Toast.makeText(getContext(), "Tidak Dapat Terhubung Ke Server, Cek Koneksi Internet Anda", Toast.LENGTH_SHORT).show();
                 relConn.setVisibility(view.VISIBLE);
-                recyclerView.setVisibility(view.GONE);
+                relContent.setVisibility(view.GONE);
+                progress.dismiss();
             }
         });
         requestQueue.add(stringRequest);

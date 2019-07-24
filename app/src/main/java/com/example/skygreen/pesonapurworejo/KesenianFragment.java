@@ -1,6 +1,7 @@
 package com.example.skygreen.pesonapurworejo;
 
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatDialog;
@@ -55,6 +56,7 @@ public class KesenianFragment extends Fragment implements KesenianView {
     private AppCompatDialog dialog;
     private RelativeLayout relConn;
     private ScrollView scContent;
+    private ProgressDialog progress;
 
     public KesenianFragment() {
         // Required empty public constructor
@@ -65,6 +67,12 @@ public class KesenianFragment extends Fragment implements KesenianView {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+        progress = new ProgressDialog(getContext());
+        progress.setCancelable(false);
+        progress.setMessage("Mohon Tunggu");
+        progress.show();
+
         final View view       = inflater.inflate(R.layout.fragment_kesenian, container, false);
 
         relConn         = view.findViewById(R.id.rel_conn);
@@ -105,6 +113,7 @@ public class KesenianFragment extends Fragment implements KesenianView {
                         });
                         recyclerView.setAdapter(kesenianAdapter);
                     }
+                    progress.dismiss();
                 }
                 catch(JSONException e){
                     e.printStackTrace();
@@ -116,6 +125,7 @@ public class KesenianFragment extends Fragment implements KesenianView {
                 //Toast.makeText(getContext(), "Tidak Dapat Terhubung Ke Server, Cek Koneksi Internet Anda", Toast.LENGTH_SHORT).show();
                 relConn.setVisibility(view.VISIBLE);
                 scContent.setVisibility(view.GONE);
+                progress.dismiss();
             }
         });
 

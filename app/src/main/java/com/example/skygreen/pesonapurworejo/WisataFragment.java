@@ -1,6 +1,7 @@
 package com.example.skygreen.pesonapurworejo;
 
 
+import android.app.ProgressDialog;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -54,6 +55,7 @@ public class WisataFragment extends Fragment implements WisataView {
     private AppCompatDialog dialog;
     private RelativeLayout relConn;
     private ScrollView scContent;
+    private ProgressDialog progress;
 
 
     public WisataFragment() {
@@ -65,6 +67,11 @@ public class WisataFragment extends Fragment implements WisataView {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+        progress = new ProgressDialog(getContext());
+        progress.setCancelable(false);
+        progress.setMessage("Mohon Tunggu");
+        progress.show();
 
         final View view       = inflater.inflate(R.layout.fragment_wisata, container, false);
 
@@ -106,6 +113,7 @@ public class WisataFragment extends Fragment implements WisataView {
                         });
                         recyclerView.setAdapter(wisataAdapter);
                     }
+                    progress.dismiss();
                 }
                 catch(JSONException e){
                     e.printStackTrace();
@@ -117,6 +125,7 @@ public class WisataFragment extends Fragment implements WisataView {
                 //Toast.makeText(getContext(), "Tidak Dapat Terhubung Ke Server, Cek Koneksi Internet Anda", Toast.LENGTH_SHORT).show();
                 relConn.setVisibility(view.VISIBLE);
                 scContent.setVisibility(view.GONE);
+                progress.dismiss();
             }
         });
 

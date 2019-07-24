@@ -1,6 +1,7 @@
 package com.example.skygreen.pesonapurworejo;
 
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatDialog;
@@ -51,6 +52,7 @@ public class EventFragment extends Fragment implements EventView {
     private AppCompatDialog dialog;
     private RelativeLayout relConn;
     private ScrollView scContent;
+    private ProgressDialog progress;
 
     public EventFragment() {
         // Required empty public constructor
@@ -61,6 +63,11 @@ public class EventFragment extends Fragment implements EventView {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        progress = new ProgressDialog(getContext());
+        progress.setCancelable(false);
+        progress.setMessage("Mohon Tunggu");
+        progress.show();
+
         final View view       = inflater.inflate(R.layout.fragment_event, container, false);
         relConn         = view.findViewById(R.id.rel_conn);
         scContent       = view.findViewById(R.id.sc_content);
@@ -98,6 +105,7 @@ public class EventFragment extends Fragment implements EventView {
                         });
                         recyclerView.setAdapter(eventAdapter);
                     }
+                    progress.dismiss();
                 }
                 catch(JSONException e){
                     e.printStackTrace();
@@ -109,6 +117,7 @@ public class EventFragment extends Fragment implements EventView {
                // Toast.makeText(getContext(), "Tidak Dapat Terhubung Ke Server, Cek Koneksi Internet Anda", Toast.LENGTH_SHORT).show();
                 relConn.setVisibility(view.VISIBLE);
                 scContent.setVisibility(view.GONE);
+                progress.dismiss();
             }
         });
         requestQueue.add(stringRequest);

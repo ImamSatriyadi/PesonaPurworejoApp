@@ -1,6 +1,7 @@
 package com.example.skygreen.pesonapurworejo;
 
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatDialog;
@@ -52,6 +53,7 @@ public class KulinerFragment extends Fragment implements KulinerView {
     private AppCompatDialog dialog;
     private RelativeLayout relConn;
     private ScrollView scContent;
+    private ProgressDialog progress;
 
     public KulinerFragment() {
         // Required empty public constructor
@@ -62,6 +64,11 @@ public class KulinerFragment extends Fragment implements KulinerView {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        progress = new ProgressDialog(getContext());
+        progress.setCancelable(false);
+        progress.setMessage("Mohon Tunggu");
+        progress.show();
+
         final View view       = inflater.inflate(R.layout.fragment_kuliner, container, false);
         relConn         = view.findViewById(R.id.rel_conn);
         scContent       = view.findViewById(R.id.sc_content);
@@ -100,6 +107,7 @@ public class KulinerFragment extends Fragment implements KulinerView {
                         });
                         recyclerView.setAdapter(kulinerAdapater);
                     }
+                    progress.dismiss();
                 }
                 catch(JSONException e){
                     e.printStackTrace();
@@ -111,6 +119,7 @@ public class KulinerFragment extends Fragment implements KulinerView {
                 //Toast.makeText(getContext(), "Tidak Dapat Terhubung Ke Server, Cek Koneksi Internet Anda", Toast.LENGTH_SHORT).show();
                 relConn.setVisibility(view.VISIBLE);
                 scContent.setVisibility(view.GONE);
+                progress.dismiss();
             }
         });
 
