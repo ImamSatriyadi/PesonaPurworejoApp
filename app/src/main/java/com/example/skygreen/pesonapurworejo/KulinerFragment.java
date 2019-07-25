@@ -82,8 +82,7 @@ public class KulinerFragment extends Fragment implements KulinerView {
         stringRequest   = new StringRequest(Request.Method.GET, urlkesenian,new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.d("response", response);
-                try{
+                 try{
                     JSONObject jsonObject    = new JSONObject(response);
                     JSONArray jsonArray     = jsonObject.getJSONArray("datakuliner");
                     for(int i = 0; i < jsonArray.length(); i++){

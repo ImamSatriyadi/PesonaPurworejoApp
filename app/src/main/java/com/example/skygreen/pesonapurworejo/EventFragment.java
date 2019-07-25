@@ -82,7 +82,6 @@ public class EventFragment extends Fragment implements EventView {
         stringRequest   = new StringRequest(Request.Method.GET, urlkesenian,new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.d("response", response);
                 try{
                     JSONObject jsonObject    = new JSONObject(response);
                     JSONArray jsonArray     = jsonObject.getJSONArray("dataevent");

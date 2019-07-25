@@ -88,7 +88,6 @@ public class WisataFragment extends Fragment implements WisataView {
         stringRequest   = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Log.d("response", response);
                 try{
                     JSONObject jsonObject    = new JSONObject(response);
                     JSONArray jsonArray     = jsonObject.getJSONArray("datawisata");
