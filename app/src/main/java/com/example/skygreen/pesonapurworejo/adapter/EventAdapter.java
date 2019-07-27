@@ -41,7 +41,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         final EventModel eventModel = eventModels.get(i);
         Glide.with(context)
-                .load("http://bambu.web.id/"+eventModel.getIcon())
+                .load("http://bambu.web.id/pesona-purworejo/"+eventModel.getIcon())
                 .crossFade()
                 .placeholder(R.mipmap.ic_launcher)
                 .into(viewHolder.icon);

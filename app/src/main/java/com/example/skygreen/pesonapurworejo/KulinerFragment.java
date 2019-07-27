@@ -77,7 +77,7 @@ public class KulinerFragment extends Fragment implements KulinerView {
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        String urlkesenian    = "http://bambu.web.id/getkuliner.php";
+        String urlkesenian    = "http://bambu.web.id/pesona-purworejo/api/mobile/getkuliner.php";
         requestQueue  = Volley.newRequestQueue(getContext());
         stringRequest   = new StringRequest(Request.Method.GET, urlkesenian,new Response.Listener<String>() {
             @Override
@@ -148,7 +148,7 @@ public class KulinerFragment extends Fragment implements KulinerView {
         final TextView sosialMedia    = dialog.findViewById(R.id.txt_sosial_media);
 
         Glide.with(getContext())
-                .load("http://bambu.web.id/"+kulinerModel.getIcon())
+                .load("http://bambu.web.id/pesona-purworejo/"+kulinerModel.getIcon())
                 .crossFade()
                 .placeholder(R.mipmap.ic_launcher)
                 .into(gambar);

@@ -82,7 +82,7 @@ public class HomeFragment extends Fragment implements RecomendedWisataView{
         final LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(getContext());
         recyclerViewUnggulan.setLayoutManager(linearLayoutManager1);
 
-        String url    = "http://bambu.web.id/getwisatarekomendasi.php";
+        String url    = "http://bambu.web.id/pesona-purworejo/api/mobile/getwisatarekomendasi.php";
         requestQueue  = Volley.newRequestQueue(getContext());
         stringRequest   = new StringRequest(Request.Method.GET, url,new Response.Listener<String>() {
             @Override
@@ -163,7 +163,7 @@ public class HomeFragment extends Fragment implements RecomendedWisataView{
         final TextView keterangan   = dialog.findViewById(R.id.txt_deskripsi);
 
         Glide.with(getContext())
-                .load("http://bambu.web.id/"+recomendedWisataModel.getIcon())
+                .load("http://bambu.web.id/pesona-purworejo/"+recomendedWisataModel.getIcon())
                 .crossFade()
                 .placeholder(R.mipmap.ic_launcher)
                 .into(gambar);

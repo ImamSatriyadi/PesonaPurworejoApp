@@ -82,7 +82,7 @@ public class WisataFragment extends Fragment implements WisataView {
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        String url    = "http://bambu.web.id/getwisata.php";
+        String url    = "http://bambu.web.id/pesona-purworejo/api/mobile/getwisata.php";
         requestQueue  = Volley.newRequestQueue(getContext());
 
         stringRequest   = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
@@ -155,7 +155,7 @@ public class WisataFragment extends Fragment implements WisataView {
         final TextView keterangan   = dialog.findViewById(R.id.txt_deskripsi);
 
         Glide.with(getContext())
-                .load("http://bambu.web.id/"+wisataModel.getIcon())
+                .load("http://bambu.web.id/pesona-purworejo/"+wisataModel.getIcon())
                 .crossFade()
                 .placeholder(R.mipmap.ic_launcher)
                 .into(gambar);

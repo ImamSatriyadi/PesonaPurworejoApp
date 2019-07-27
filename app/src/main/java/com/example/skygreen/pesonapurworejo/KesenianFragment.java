@@ -82,7 +82,7 @@ public class KesenianFragment extends Fragment implements KesenianView {
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        String urlkesenian    = "http://bambu.web.id/getkesenian.php";
+        String urlkesenian    = "http://bambu.web.id/pesona-purworejo/api/mobile/getkesenian.php";
         requestQueue  = Volley.newRequestQueue(getContext());
 
         stringRequest   = new StringRequest(Request.Method.GET, urlkesenian,new Response.Listener<String>() {
@@ -155,7 +155,7 @@ public class KesenianFragment extends Fragment implements KesenianView {
 
 
         Glide.with(getContext())
-                .load("http://bambu.web.id/"+kesenianModel.getIcon())
+                .load("http://bambu.web.id/pesona-purworejo/"+kesenianModel.getIcon())
                 .crossFade()
                 .placeholder(R.mipmap.ic_launcher)
                 .into(gambar);

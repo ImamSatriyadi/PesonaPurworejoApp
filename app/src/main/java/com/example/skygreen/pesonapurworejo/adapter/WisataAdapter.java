@@ -45,7 +45,7 @@ public class WisataAdapter extends RecyclerView.Adapter<WisataAdapter.ViewHolder
     public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int i) {
         final WisataModel wisataModel = wisataModels.get(i);
         Glide.with(context)
-                .load("http://bambu.web.id/"+wisataModel.getIcon())
+                .load("http://bambu.web.id/pesona-purworejo/"+wisataModel.getIcon())
                 .crossFade()
                 .placeholder(R.mipmap.ic_launcher)
                 .into(viewHolder.icon);

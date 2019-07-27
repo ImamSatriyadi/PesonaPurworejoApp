@@ -41,7 +41,7 @@ public class KesenianAdapter extends RecyclerView.Adapter<KesenianAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         final KesenianModel kesenianModel = kesenianModels.get(i);
         Glide.with(context)
-                .load("http://bambu.web.id/"+kesenianModel.getIcon())
+                .load("http://bambu.web.id/pesona-purworejo/"+kesenianModel.getIcon())
                 .crossFade()
                 .placeholder(R.mipmap.ic_launcher)
                 .into(viewHolder.icon);

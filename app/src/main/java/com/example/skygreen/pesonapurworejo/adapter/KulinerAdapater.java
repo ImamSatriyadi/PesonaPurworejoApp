@@ -44,7 +44,7 @@ public class KulinerAdapater extends RecyclerView.Adapter<KulinerAdapater.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         final KulinerModel kulinerModel = kulinerModels.get(i);
         Glide.with(context)
-                .load("http://bambu.web.id/"+kulinerModel.getIcon())
+                .load("http://bambu.web.id/pesona-purworejo/"+kulinerModel.getIcon())
                 .crossFade()
                 .placeholder(R.mipmap.ic_launcher)
                 .into(viewHolder.icon);

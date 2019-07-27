@@ -77,7 +77,7 @@ public class EventFragment extends Fragment implements EventView {
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        String urlkesenian    = "http://bambu.web.id/getevent.php";
+        String urlkesenian    = "http://bambu.web.id/pesona-purworejo/api/mobile/getevent.php";
         requestQueue  = Volley.newRequestQueue(getContext());
         stringRequest   = new StringRequest(Request.Method.GET, urlkesenian,new Response.Listener<String>() {
             @Override
@@ -140,7 +140,7 @@ public class EventFragment extends Fragment implements EventView {
 
 
         Glide.with(getContext())
-                .load("http://bambu.web.id/"+eventModel.getIcon())
+                .load("http://bambu.web.id/pesona-purworejo/"+eventModel.getIcon())
                 .crossFade()
                 .placeholder(R.mipmap.ic_launcher)
                 .into(gambar);

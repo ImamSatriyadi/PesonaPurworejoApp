@@ -41,7 +41,7 @@ public class WisataUnggulanAdapter extends RecyclerView.Adapter<WisataUnggulanAd
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         final RecomendedWisataModel recomendedWisataModel = recomendedWisataModels.get(i);
         Glide.with(context)
-                .load("http://bambu.web.id/"+recomendedWisataModel.getIcon())
+                .load("http://bambu.web.id/pesona-purworejo/"+recomendedWisataModel.getIcon())
                 .crossFade()
                 .placeholder(R.mipmap.ic_launcher)
                 .into(viewHolder.icon);
