@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'pesonapurworejo'
+            keyPassword 'imam180698'
+            storeFile file('G:/DATA_KAMPUS/Semester_6/AKB/keystore/pesonapurworejokey.jks')
+            storePassword 'imam180698'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.skygreen.pesonapurworejo"
@@ -15,12 +23,14 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            signingConfig signingConfigs.config
         }
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.android.support:design:28.0.0'
